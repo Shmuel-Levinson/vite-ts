@@ -1,42 +1,54 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.rotation{
+    animation: rotate infinite linear 1s;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.scrollable-section {
+    /*scrollbar-gutter: stable;*/
+    overflow-y: scroll;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.suggestion {
+    color: #000000;
+    background-color: #eee;
+    border: 1px solid transparent;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.suggestion:hover {
+    border:1px solid #444;
+
 }
 
-.card {
-  padding: 2em;
+.reset-button{
+    background-color: #f8f9fa;
+    color: #222;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.1s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.reset-button:focus {
+    outline: none;
+}
+
+.reset-button:hover {
+    background-color: #e9ecef;
+}
+
+input:focus {
+    outline: none;
 }
